@@ -1,4 +1,4 @@
-# Student Picker
+# Student Picker App Challenge
 ​
 Create a web app that will allow a user to input names into a list, and then randomly present them.
 ​
