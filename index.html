@@ -7,8 +7,38 @@
     <script src="main.js" charset="utf-8"></script>
   </head>
   <body>
-    <h1>Student Picker App</h1>
-    <hr>
-    
+    <header>
+      <h1>Student Picker</h1>
+    </header>
+
+    <form class="form-group">
+      <fieldset>
+        <label for="student-names"><h3 class='student-title'>Student Names:</h3></label>
+        <textarea class='student-names' name="student-names" rows="8" cols="120"></textarea>
+
+        <div class="submit-buttons">
+          <button type="button" id="submit-names">Submit</button>
+          <button type="button" id="get-name">Get Random</button>
+          <button type="button" id="generate-teams">Generate Teams</button>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <div class="options" style="display: inline;">
+          <fieldset class='saved-names'>
+            <div class="list-group">
+
+            </div>
+          </fieldset>
+          <br>
+          <fieldset class="extra-features">
+
+          </fieldset>
+        </div>
+      </fieldset>
+    </form>
+
+
+
   </body>
 </html>

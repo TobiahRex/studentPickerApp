@@ -3,3 +3,19 @@ body {
   margin: auto;
   width: 50%;
 }
+
+div.list-group {
+  text-align : left;  
+}
+
+fieldset.saved-names {
+  height : 100px;
+}
+
+fieldset.extra-features {
+  height : 50px;
+}
+
+.student-title {
+  text-align : left;
+}
