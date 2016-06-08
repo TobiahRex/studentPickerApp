@@ -1,44 +1,67 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Student Picker App</title>
-    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
-    <script src="main.js" charset="utf-8"></script>
-  </head>
-  <body>
-    <header>
-      <h1>Student Picker</h1>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <title>Student Picker App</title>
+  <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+  <script src="main.js" charset="utf-8"></script>
+</head>
+<body>
+  <header>
+    <h1>Student Picker</h1>
+  </header>
 
-    <form class="form-group">
-      <fieldset>
-        <label for="student-names"><h3 class='student-title'>Student Names:</h3></label>
-        <textarea class='student-names' name="student-names" rows="8" cols="120"></textarea>
+  <form class="form-group">
+    <fieldset>
+      <label for="student-names">
+        <h3>
+          Names Input:
+        </h3>
+      </label>
+      <textarea class='student-names' name="student-names" rows="8" cols="120"></textarea>
+      <button type="button" id="submit-names">Submit</button>
+    </fieldset>
 
-        <div class="submit-buttons">
-          <button type="button" id="submit-names">Submit</button>
-          <button type="button" id="get-name">Get Random</button>
-          <button type="button" id="generate-teams">Generate Teams</button>
+    <fieldset>
+      <div class="options">
+        <h3>Student Names: </h3>
+
+        <fieldset>
+          <div class="list-group saved-names">
+            <ol type='1'>
+
+            </ol>
+          </div>
+        </fieldset>
+
+        <h3>Random Student:<button type="button" id="get-name">Get Random</button> </h3>
+        <fieldset class="extra-features">
+          <div class="list-group random">
+            <b class='random-choice'>
+
+            </b>
+          </div>
+        </fieldset>
+
+        <div class="row">
+          <h3>Teams:
+            <input type="number" class='teams'/>
+            <button type="button" id="generate-teams">Generate Teams</button>
+          </h3>
         </div>
-      </fieldset>
+        <fieldset>
+          <div class="list-group teams">
+            <ol type='1'>
 
-      <fieldset>
-        <div class="options" style="display: inline;">
-          <fieldset class='saved-names'>
-            <div class="list-group">
+            </ol>
+          </div>
+        </fieldset>
 
-            </div>
-          </fieldset>
-          <br>
-          <fieldset class="extra-features">
-
-          </fieldset>
-        </div>
-      </fieldset>
-    </form>
+      </div>
+    </fieldset>
+  </form>
 
 
 
-  </body>
+</body>
 </html>
