@@ -1,29 +1,62 @@
  @font-face {
-   font-family: Delicious;
-   src: url('optimus/Optimus.otf');
+   font-family: optimus;
+   src: url('assets/optimus/Optimus.otf');
  }
+
+ @font-face {
+   font-family: zekton;
+   src: url('assets/zekton/zekton rg.ttf');
+ }
+
+ @font-face {
+   font-family: zekton;
+   src: url('assets/zekton/zekton rg.ttf');
+ }
+
 
 body {
   text-align        : center;
   margin            : auto;
   width             : 50%;
-  font-family       : Delicious;
-  font-size         : 30px;
+  background-color  : #111010;
+}
+
+h1 {
+  font-family       : optimus;
+  font-size         : 50px;
   color             : #ff0000;
-  background-color  : #2d2d2d;
+}
+
+form {
+  font-family       : optimus;
+  font-size         : 24px;
+  color             : #c85b01;
+}
+
+div.list-group.saved-names {
+  font-family       : zekton;
+  color             : #f6d600;
+}
+
+div.list-group.teams {
+  font-family       : zekton;
+  color             : #f6d600;
+}
+
+textarea {
+  font-size         : 24px;
+  color             : #f6d600;
+  font-family       : zekton;
+  background-color  : #111010;
+}
+
+fieldset {
+  border : #111010 3px solid;
 }
 
 div.list-group {
   text-align : left;
 }
-/*
-fieldset.saved-names {
-  height : 100px;
-}
-
-fieldset.extra-features {
-  height : 50px;
-}*/
 
 h3 {
   text-align : left;

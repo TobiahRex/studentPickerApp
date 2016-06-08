@@ -1,17 +1,13 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', ()=> {
-
   document.getElementById('submit-names').onclick = submitNames;
   document.getElementById('get-name').onclick = getName;
   document.getElementById('generate-teams').onclick = generateTeams;
-
-
-  console.log('names');
-
 });
 
 function submitNames(){
+  document.querySelector('div.list-group.saved-names ol').innerHTML = '';
   let names = document.getElementsByTagName('textarea')[0].value;
 
   names.split(',').forEach(name => {
@@ -34,13 +30,11 @@ function generateTeams(){
   if(groups > names.length ) return  alert('Your input is too high. Choose fewer teams.');
 
   if(teamNum % 1 === 0){
-    // teamNum = 3
     let namesList = names.length;
-    // let namesPerTeam = teamNum;    // 3 teams = 2 names or 6 names total
     let teamTotal = namesList / teamNum;
 
     while(namesList > 0){
-      console.log('START: ', namesList);
+
       while(teamTotal > 0){ // team tag
         let teamTag = document.createElement('li');
         teamTag.setAttribute('type', '1');
@@ -53,14 +47,49 @@ function generateTeams(){
           teamTag.appendChild(name);
           namesPerTeam--;
           namesList--;
-        } // end inner loop;
-        console.log('teamTag: ', teamTag);
+        }
         document.querySelector('div.list-group.teams ol').appendChild(teamTag);
         teamTotal--;
       } // end outter loop
     }// end of outter-outter loop
   } else {
-    console.log('decimal');
+    var namesList = names.length;
+    var namesPerTeam = Math.ceil(namesList/groups);  // number of names on each team allowed
+    console.log('names per team: ', namesPerTeam);
+
+    while(names.length > 0){
+      // console.log('totalCount START: ', totalCount);
+      while(namesPerTeam > 0){
+        // let name = document.createElement('p');
+        // name.innerHTML = totalNames[Math.floor(Math.random()*totalNames.length)];
+
+        names.splice(0,1);
+
+        namesPerTeam--;
+        namesList--;
+        console.log('1. Total names left to render: ', namesList);
+        console.log(names);
+        // console.log('names left to print: ', totalCount);
+      }
+      names.splice(0,1);
+      console.log('2. Total names left to render: ', names);
+      // if((namesList/groups) % 1 === 0){
+      //   while(names.length > 0){
+      //     console.log('NEW names per team: ', namesPerTeam);
+      //     while(namesList > 0){
+      //       namesPerTeam--;
+      //       namesList--;
+      //     }
+      //     names.splice(0, 1);
+      //     console.log('3. Total names left to render: ', namesList);
+      //   }
+      // }
+    };
+
+
+
+
+
   }
 
   // document.querySelector('div.list-group.teams ul').innerHTML = teams;
